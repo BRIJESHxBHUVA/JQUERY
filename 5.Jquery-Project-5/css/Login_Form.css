@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+section{
+    height: 100vh;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+section fieldset{
+    height: 300px;
+    width: 60%;
+    border: 1px solid white;
+    border-radius: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+legend{
+    margin-left: 150px;
+    font-size: 25px;
+    color: white;
+}
+#mail{
+    height: 40px;
+    width: 280px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+#password{
+    height: 40px;
+    width: 280px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+button{
+    height: 40px;
+    width: 280px;
+    border: 1px solid black;
+    border-radius: 20px;
+    transition: 1s;
+    font-size: 22px;
+}
+button:hover{
+    background-color: black;
+    color: white;
+    transition: 1s;
+}

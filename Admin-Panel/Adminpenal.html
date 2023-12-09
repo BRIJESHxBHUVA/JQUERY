@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+   
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <title>Adminpenal</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+       aside{
+        height: 100vh;
+        width: 250px;
+        border: 1px solid black;
+        background-color: #4e44b5;
+        position: fixed;
+        transition: 3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+       }
+       .board{
+        margin-left: -250px;
+        transition: 3s;
+       }
+       aside .heading{
+        height: 50px;
+        width: 100%;
+        border: 1px solid black;
+       }
+       .heading h2{
+        font-size: 35px;
+        color: white;
+       }
+       aside .id{
+        height: 300px;
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+       }
+       .id p{
+        color: white;
+        font-size: 20px;
+       }
+       .id .img{
+        height: 130px;
+        width: 130px;
+        border: px solid black;
+        border-radius: 50%;
+       }
+       .img img{
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+       }
+       aside .nav{
+        height: 400px;
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+       }
+       .nav a{
+        text-decoration: none;
+        color: white;
+        font-size: 22px;
+       }
+       section{
+        height: 100vh;
+        border: 1px solid black;
+        margin-left: 250px;
+        transition: 3s;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+       }
+       .front{
+        margin-left: 0;
+        transition: 3s;
+       }
+       section header{
+        height: 120px;
+        width: 100%;
+        border: 1px solid black;
+        background-color: beige;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       }
+       header .box{
+        height: 100%;
+        width: 350px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+       }
+       .search i{
+        font-size: 30px;
+        margin-left: 10px;
+        margin-top: 5px;
+       }
+       .box .search{
+        height: 40px;
+        width: 300px;
+        border: 1px solid black;
+        border-radius: 40px;
+        box-shadow: 2px 1px 4px;
+       }
+       header .icon{
+        height: 100%;
+        width: 200px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+       }
+       .icon .menu{
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+       }
+       .icon .alram{
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+       }
+       .alram i{
+        font-size: 35px;
+       }
+       .icon .log{
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+       }
+       .log i{
+        font-size: 35px;
+       }
+       .menu i{
+        font-size: 35px;
+        color: orange;
+       }
+       section .bighdr{
+        height: 87vh;
+        width: 100%;
+        border: 1px solid black;
+        background-color: bisque;
+       }
+       .bighdr .card{
+        height: 500px;
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+       }
+       .card .card1{
+        height: 90%;
+        width: 25%;
+        border: 1px solid black;
+       }
+       .card .card2{
+        height: 90%;
+        width: 25%;
+        border: 1px solid black;
+       }
+       .card .card3{
+        height: 90%;
+        width: 25%;
+        border: 1px solid black;
+       }
+       .cardimg{
+        height: 50%;
+        width: 100%;
+        border: 1px solid black;
+       }
+       .cardimg img{
+        height: 100%;
+        width: 100%;
+       }
+       .cardabt{
+        height: 50%;
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+       }
+       .cardabt h1{
+        font-size: 30px;
+       }
+       .cardabt p{
+        font-size: 18px;
+       }
+    </style>
+</head>
+<body>
+    <aside>
+        <div class="heading">
+            <h2><kbd>Dashboard</kbd></h2>
+        </div>
+      <div class="id">
+        <div class="img">
+            <img src="image/img.jpeg">
+        </div>
+        <p>Vasuki Tradelink PVT.LTD<br><br>
+          Joining Date: 20/03/2021</p>
+    </div>
+        <div class="nav">
+            <a href="">Home</a>
+            <a href="">Time Management</a>
+            <a href="">Inbox</a>
+            <a href="">Calendar</a>
+            <a href="">Analysis</a>
+            <a href="">Setting</a>
+        </div>
+    </aside>
+    <section>
+        <header>
+            <div class="box">
+               
+                <div class="search">
+                    <i class="ri-search-line"></i>
+                </div>
+            </div>
+            <div class="icon">
+            <div class="menu">
+                <i class="ri-menu-line"></i>
+            </div>
+            <div class="alram">
+                <i class="ri-notification-fill"></i>
+            </div>
+            <div class="log">
+                <i class="ri-logout-box-fill"></i>
+            </div>
+        </div>
+        </header>
+        <div class="bighdr">
+            <div class="card">
+                <div class="card1">
+                    <div class="cardimg">
+                        <img src="image/miles1.jpg">
+                    </div>
+                    <div class="cardabt">
+                        <h1><kbd>Anthracite</kbd></h1>
+                        <p>Anthracite, also known as hard coal and black coal, is a hard, compact variety of coal that has a submetallic lustre. It has the highest carbon content, the fewest impurities, and the highest energy density of all types of coal and is the highest ranking of coals.</p>
+                    </div>
+                </div>
+                <div class="card2">
+                    <div class="cardimg">
+                        <img src="image/miles2.jpg" alt="">
+                    </div>
+                    <div class="cardabt">
+                        <h1><kbd>Indonesian Coal</kbd></h1>
+                        <p>Since the mid 1990’s Indonesian coal mining in Indonesia has developed significantly. The World Coal Institute gauges that in 2008 Indonesia mined 246 million tons of coal with a little more than 200 millions tons of this traded. </p>
+                    </div>
+                </div>
+                <div class="card3">
+                    <div class="cardimg">
+                        <img src="image/miles3.jpg" alt="">
+                    </div>
+                    <div class="cardabt">
+                        <h1><kbd>Bituminous</kbd></h1>
+                        <p> The ranking depends on the types and amounts of carbon the coal contains and on the amount of heat energy the coal can produce.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body><script type="text/javascript">
+    $(document).ready(function(){
+        $(".menu").click(function(){
+            $("aside").toggleClass("board")
+            $("section").toggleClass("front")
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".log").click(function(){
+            window.location.replace("Login_Form.html");
+        });
+    });
+</script>
+</html>

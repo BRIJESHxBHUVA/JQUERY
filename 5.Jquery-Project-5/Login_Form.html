@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Login Form</title>
+    
+     <!-- link CSS -->
+     <link rel="stylesheet" href="css/Login_Form.css">
+     <!-- link CSS -->
+
+
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <!-- Jquery CDN -->
+
+
+</head>
+<body>
+    <section style="background: url(image/2927262.jpg); background-size: cover;">
+        <fieldset>
+            <legend>Login Form</legend>
+        
+        <form>
+            <input type="email" placeholder="Enter Your Email id" id="mail"><br><br>
+            <input type="password" placeholder="Enter Correct Password" id="password"><br><br>
+            <button type="button">Login</button>
+        </form>
+   
+</fieldset>
+    </section>
+</body>
+
+    <!-- Login_Form Connect with Adminpanel Jquery -->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("button").click(function(){
+        
+        var us=document.getElementById('mail').value;
+        var pw=document.getElementById('password').value;
+
+        if(us=="brijesh" && pw=="618932")
+        {
+            window.location.replace("Adminpanel.html");
+        }
+        });
+    });
+</script>
+
+    <!-- Login_Form Connect with Adminpanel Jquery -->
+
+</html>

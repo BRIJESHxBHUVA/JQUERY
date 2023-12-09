@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Adminpanel</title>
+
+
+    <!-- link CSS -->
+    <link rel="stylesheet" href="css/Adminpanel.css">
+    <!-- link CSS -->
+
+
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <!-- Jquery CDN -->
+
+    <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Remix Icon CDN -->
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome CDN -->
+
+    <!-- Chart JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <!-- Chart JS CDN -->
+
+    <!-- Celandar JS CDN -->
+    <link href="css/dycalendar.min.css" rel="stylesheet" />
+     <!-- Celandar JS CDN -->
+
+ 
+</head>
+
+<body>
+
+    <aside>
+        <div class="heading">
+            <h1><kbd>Dashboard</kbd></h1>
+        </div>
+        <div class="profile">
+            <div class="img">
+                <img src="image/id.webp" alt="">
+            </div>
+            <h2>Bhuva Brijesh D.</h2>
+            <p>Joining Date: 26-07-2023</p>
+        </div>
+        <div class="nav">
+            <a href="">Students</a>
+            <a href="">Teachers</a>
+            <a href="">Employees</a>
+            <a href="">Analysis</a>
+            <a href="">Earning</a>
+            <a href="">Setting</a>
+        </div>
+    </aside>
+    <section>
+        <header>
+            <div class="box">
+               <input type="text" placeholder="search Here" class="search">
+                    <i class="ri-search-line"></i>
+                
+            </div>
+            <div class="icon">
+                <div class="menu">
+                    <i class="ri-menu-line"></i>
+                </div>
+                <div class="alram">
+                    <i class="ri-notification-fill"></i>
+                </div>
+                <div class="log">
+                    <i class="ri-logout-box-fill"></i>
+                </div>
+            </div>
+        </header>
+        <div class="data">
+            <div class="detail">
+
+           
+            <div class="count" style="background-color: #ffffff;">
+                <div class="number">
+                    <h1 style="color: #299b63;"><kbd>1217</kbd></h1>
+                    <p style="color: #299b63;"><kbd>Students</kbd></p>
+                </div>
+                <div class="datai">
+                    <i class="fa-sharp fa-solid fa-graduation-cap" style="color: #299b63;"></i>
+                </div>
+            </div>
+            <div class="count">
+                <div class="number">
+                    <h1><kbd>42</kbd></h1>
+                    <p><kbd>Teachers</kbd></p>
+                </div>
+                <div class="datai">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+            </div>
+            <div class="count">
+                <div class="number">
+                    <h1><kbd>68</kbd></h1>
+                    <p><kbd>Employees</kbd></p>
+                </div>
+                <div class="datai">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+            </div>
+            <div class="count">
+                <div class="number">
+                    <h1><kbd>$4500</kbd></h1>
+                    <p><kbd>Earnings</kbd></p>
+                </div>
+                <div class="datai">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+            </div>
+        </div>
+            <div class="charts">
+                <div class="bar">
+                    <h2><kbd>Earnings (past 12 montha)</kbd></h2>
+                    <canvas id="bar" style="width:100%; max-width: 100%;"></canvas>
+                </div>
+                <div class="type">
+                <div class="round">
+                    <h2><kbd>Employees</kbd></h2>
+                    <canvas id="round" style="height: 80%; width: 100%"></canvas>
+                </div>
+                <div class="date">
+                    <div class="some-class">
+                        <h1 style="text-align: center; font-size: 35px;"><kbd>Calendar</kbd></h1><br><br>
+                        <div id="dycalendar-month-prev-next-button" class="dycalendar-container skin-green shadow-default"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+       
+    </section>
+</body>
+
+        <!-- Calendar Jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/dycalendar-jquery.min.js"></script>
+        <script src="js/default.js"></script>
+        <!-- Calendar Jquery -->
+
+
+        <!-- Navbar Toogle Jquery -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".menu").click(function(){
+            $("aside").toggleClass("board");
+            $("section").toggleClass("front");
+        });
+    });
+</script>
+    <!-- Navbar Toogle Jquery -->
+
+
+
+    <!-- Bar Chart Jquery -->
+
+<script type="text/javascript">
+    var xValues = ["Jan", "Feb", "Mar", "Apr", "May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var yValues = [18, 25, 22, 24, 28,33,30,40,45,50,52,55];
+var barColors = ["red", "green","blue","orange","brown","lime","black","#317f81","#bb9b42","#1a8cff","#692459","#90db2c"];
+
+new Chart("bar", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "$ Earning By Month"
+    }
+  }
+});
+</script>
+
+    <!-- Bar Chart Jquery -->
+
+
+
+    <!-- Round Chart Jquery -->
+
+
+<script type="text/javascript">
+var xValues = ["Academic", "Non-Academic", "Administration", "Others",];
+var yValues = [55, 25, 10, 10,];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("round", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "$ Earning by Stage"
+    }
+  }
+});
+</script>
+
+    <!-- Round Chart Jquery -->
+
+
+    <!-- Replace to Login Page Jquery -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".log").click(function(){
+
+        window.location.replace("Login_Form.html");
+        
+        });
+    });
+</script>
+
+<!-- Replace to Login Page Jquery -->
+
+</html>
